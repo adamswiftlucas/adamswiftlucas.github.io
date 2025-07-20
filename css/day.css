@@ -1,0 +1,275 @@
+@font-face {
+  font-family: 'True-Sans-BookWeb';
+  src: url('True-Sans-BookWeb.woff') format('woff');
+  src: url('True-Sans-BookWeb.woff2') format('woff2');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'True-Sans-BookItalicWeb';
+  src: url('True-Sans-BookItalicWeb.woff') format('woff');
+  src: url('True-Sans-BookItalicWeb.woff2') format('woff2');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'True-SansMono-UltraLight';
+  src: url('True-SansMono-UltraLight.woff') format('woff');
+  src: url('True-SansMono-UltraLight.woff2') format('woff2');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'True-SansMono-Light';
+  src: url('True-SansMono-Light.woff') format('woff');
+  src: url('True-SansMono-Light.woff2') format('woff2');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+/* CSS RESET
+-------------------------------------------------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* MAIN
+-------------------------------------------------- */
+
+html {
+  font-family: 'True-Sans-BookWeb', Arial, sans-serif;
+  font-size: 48px;
+  line-height: 1.2;
+  text-align: left;
+  color: rgb(20,15,25);
+  letter-spacing: -.1px;
+  word-spacing: -.3px;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: rgb(250,250,248);
+  max-width: 80vw;
+}
+
+h2 {
+  font-size: .6em;
+  line-height: 1.4;
+  letter-spacing: 0px;
+  word-spacing: -.1px;
+}
+
+body {
+  margin: .25em 4em .25em .5em;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: rgb(20,15,25);
+  background-color: rgb(255,232,0);
+  border: 2px solid rgb(20,15,25);
+}
+
+a::after {
+  content: " ↗";
+}
+
+.italic {
+  font-family: 'True-Sans-BookItalicWeb', Arial, sans-serif;
+  letter-spacing: .4px;
+}
+
+.button {
+  font-family: 'True-SansMono-UltraLight', Courier New, Courier, monospace;
+  font-size: .72em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  word-spacing: -3px;
+  border: 2px solid;
+  border-radius: 30px;
+  padding: 2px 17px 4px 17px;
+  white-space: nowrap;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 0.7em;
+  right: 0.75em;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: .5em;
+}
+
+.night {
+  display: none;
+}
+
+::selection {
+  background: rgb(255,232,0);
+}
+
+/* RESPONSIVITY
+-------------------------------------------------- */
+
+/* XXL */
+@media all and (min-width: 1441px) { html, body, h1 { font-size: 1.5rem; letter-spacing: -.05px; max-width: 80vw; } }
+
+/* XL */
+@media all and (max-width: 1440px) { html, body, h1 { font-size: 1.4rem; letter-spacing: -.05px; max-width: 80vw; } }
+
+/* L */
+@media all and (max-width: 1280px) {
+  html, body, h1 {
+    font-size: 1.15em;
+    line-height: 1.25;
+    max-width: 90vw;
+  }
+  .button {
+    border: 1px solid;
+    padding: 2px 14px 4px 14px;
+  }
+  a:hover {
+    border: 1px solid rgb(20,15,25);
+  }
+}
+
+/* M */
+@media all and (max-width: 1024px) { 
+  html, body, h1 { 
+    font-size: 1.1em;
+    line-height: 1.3; 
+  }
+  body {
+    margin: .35em .5em;
+    padding: 0;
+  }
+  .button {
+    border: 1px solid;
+    padding: 3px 12px 4px 12px;
+  }
+  a:hover {
+    border: 1px solid rgb(20,15,25);
+  }
+}
+
+/* S */
+@media all and (max-width: 768px) { 
+  html, body, h1 { 
+    font-size: 1.05em;
+    line-height: 1.3; 
+  }
+  body {
+    margin: .35em .5em;
+    padding: 0;
+  }
+  .button {
+    border: 1px solid;
+    padding: 3px 12px 4px 12px;
+  }
+  a:hover {
+    border: 1px solid rgb(20,15,25);
+  }
+}
+
+/* XS */
+@media all and (max-width: 576px) { 
+  html, body, h1 { 
+    font-size: 1em;
+    line-height: 1.3;
+    letter-spacing: .3px;
+    word-spacing: .1px;
+    max-width: 100%;
+    }
+  body {
+    margin: .35em .5em;
+    padding: 0;
+  }
+  .button {
+    font-family: 'True-SansMono-Light', Courier, monospace;
+    border: 1px solid;
+    padding: 3px 12px 4px 12px; 
+    }
+  a:hover {
+    border: 1px solid rgb(20,15,25);
+  }
+}
+
+/* XXS */
+@media all and (max-width: 376px) { 
+  html, body, h1 { 
+    font-size: .95em;
+    line-height: 1.3;
+    letter-spacing: .3px;
+    word-spacing: .1px;
+    }
+  body {
+    margin: .35em .5em;
+    padding: 0;
+  }
+  .button {
+    font-family: 'True-SansMono-Light', Courier, monospace;
+    border: 1px solid;
+    padding: 2px 8px 3px 8px; 
+    }
+  a:hover {
+    border: 1px solid rgb(20,15,25);
+  }
+}

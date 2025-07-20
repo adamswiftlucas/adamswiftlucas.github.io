@@ -1,0 +1,492 @@
+@font-face {
+  font-family: 'aktivgrotesk';
+  src: url('aktivgrotesk_ex_reg.eot');
+  src: url('aktivgrotesk_ex_reg.eot?#iefix') format('embedded-opentype'),
+     url('aktivgrotesk_ex_reg.woff') format('woff'),
+     url('aktivgrotesk_ex_reg.ttf') format('truetype');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'gc15-mono';
+  src: url('gc15-mono.eot');
+  src: url('gc15-mono.eot?#iefix') format('embedded-opentype'),
+     url('gc15-mono.woff') format('woff'),
+     url('gc15-mono.woff2') format('woff2'),
+     url('gc15-mono.otf') format('opentype');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'gc16-monoitalic';
+  src: url('gc16-monoitalic.eot');
+  src: url('gc16-monoitalic.eot?#iefix') format('embedded-opentype'),
+     url('gc16-monoitalic.woff') format('woff'),
+     url('gc16-monoitalic.woff2') format('woff2'),
+     url('gc16-monoitalic.otf') format('opentype');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+/* CSS Reset
+-------------------------------------------------- */
+
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html, body, h1, p, li {
+    font-family: "aktivgrotesk", sans-serif;
+    font-size: 24px;
+    line-height: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .004rem;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html, body, .container {
+    height: 100%;
+}
+
+.container, .row {
+    display: flex;
+}
+
+.container {
+    flex-direction: column;
+}
+
+.row, .row div {
+    flex: 1;
+}
+
+.row div {
+    overflow: scroll;
+    margin-top: 1.3rem;
+}
+
+h2 {
+    font-family: "gc15-mono", monospace;
+    font-size: .625rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin: 0;
+    padding: .375rem 0 1.25rem 0;
+    border: none;
+}
+
+a, a:active, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 0 1rem 0;
+    margin: 0;
+    text-align: center;
+}
+
+img, video {
+    max-width: 100%;
+}
+
+svg {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 1rem;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    padding: 1rem 1rem 1.2rem 1rem;
+}
+
+.section {
+    border-top: 1px solid black;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+div.section-more p {
+    line-height: 1.4rem;
+    text-align: left;
+}
+
+p.space-after {
+    padding-bottom: 1.5rem;
+}
+
+p.caption {
+    font-family: "gc15-mono", monospace;
+    font-size: .625rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: .5rem 0 1.5rem 0;
+    width: 50%;
+}
+
+p.excerpt {
+    font-family: "gc15-mono", monospace;
+    font-size: 72px;
+    line-height: 1.15em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    letter-spacing: -.03em;
+    padding: 0 0 1.5rem 0;
+    /*border-bottom: 1px solid black;*/
+}
+
+div.img-chunk-vert {
+    max-width: 70%;
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: .3rem;
+}
+
+div.img-chunk-horiz {
+    max-width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: .3rem;
+}
+
+div.img-chunk-horiz-vid {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: .3rem;
+}
+
+div.txt-chunk {
+    max-width: 100%;
+    display: inline-block;
+}
+
+div.space-before {
+    padding-top: 1.5rem;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.indent {
+    text-indent: 1.5rem;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.ital {
+    font-family: "gc16-monoitalic", monospace;
+}
+
+.header .is-current {
+    border-bottom: 1px solid black;
+    padding-bottom: .04rem;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.is-expanded {
+    display: block;
+    }
+
+#face {
+    fill: white;
+    stroke-width: .17px;
+    stroke: black; 
+}
+
+#hour, #min {
+    stroke: black;
+    stroke-width: .34px;
+}
+
+#sec {
+    stroke: black;
+    stroke-width: .17px;
+}
+
+@media all and (max-width: 1024px) {
+    [class*="col-"] {
+      width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .container, .row {
+      display: block;
+    }
+}
+
+@media all and (max-width: 1024px) { 
+    html, body, h1, p, li { 
+      font-size: 22px; 
+    }
+}
+
+@media all and (max-width: 768px) { 
+    html, body, h1, p, li { 
+      font-size: 20px; 
+    }
+}
+
+@media all and (max-width: 480px) {
+    html, body, h1, p, li {
+      font-size: 16px;
+    }
+    .row div {
+      margin-top: 1.9rem;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}

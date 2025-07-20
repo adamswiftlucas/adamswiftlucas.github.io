@@ -1,0 +1,736 @@
+@font-face {
+  font-family: 'aktivgrotesk';
+  src: url('aktivgrotesk_ex_reg.eot');
+  src: url('aktivgrotesk_ex_reg.eot?#iefix') format('embedded-opentype'),
+     url('aktivgrotesk_ex_reg.woff') format('woff'),
+     url('aktivgrotesk_ex_reg.ttf') format('truetype');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'gc15-mono';
+  src: url('gc15-mono.eot');
+  src: url('gc15-mono.eot?#iefix') format('embedded-opentype'),
+     url('gc15-mono.woff') format('woff'),
+     url('gc15-mono.woff2') format('woff2'),
+     url('gc15-mono.otf') format('opentype');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'gc16-monoitalic';
+  src: url('gc16-monoitalic.eot');
+  src: url('gc16-monoitalic.eot?#iefix') format('embedded-opentype'),
+     url('gc16-monoitalic.woff') format('woff'),
+     url('gc16-monoitalic.woff2') format('woff2'),
+     url('gc16-monoitalic.otf') format('opentype');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'gc16-SemiBold';
+  src: url('gc16-SemiBold.eot');
+  src: url('gc16-SemiBold.eot?#iefix') format('embedded-opentype'),
+     url('gc16-SemiBold.woff') format('woff'),
+     url('gc16-SemiBold.woff2') format('woff2'),
+     url('gc16-SemiBold.otf') format('opentype');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'gc16-SemiBoldItalic';
+  src: url('gc16-SemiBoldItalic.eot');
+  src: url('gc16-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+     url('gc16-SemiBoldItalic.woff') format('woff'),
+     url('gc16-SemiBoldItalic.woff2') format('woff2'),
+     url('gc16-SemiBoldItalic.otf') format('opentype');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+/* CSS Reset
+-------------------------------------------------- */
+
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+       v2.0 | 20110126
+       License: none (public domain)
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+      display: block;
+    }
+    body {
+      line-height: 1;
+    }
+    ol, ul {
+      list-style: none;
+    }
+    blockquote, q {
+      quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+      content: '';
+      content: none;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: blue;
+    text-shadow: none;
+}
+
+::selection {
+    background: blue;
+    text-shadow: none;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: black;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html, body, h1, p, li {
+    font-family: "aktivgrotesk", sans-serif;
+    font-size: 24px;
+    line-height: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .004rem;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: black;
+    color: white;
+    -webkit-overflow-scrolling: touch;
+}
+
+html, body, .container {
+    height: 100%;
+}
+
+.row div {
+    overflow: auto;
+    margin-top: 1.3rem;
+}
+
+h2 {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .65rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin: 0;
+    padding: .375rem 0 1.25rem 0;
+    border: none;
+}
+
+a, a:active, a:visited {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dashed white;
+}
+
+a:hover {
+    border-bottom: 1px solid white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 0 1rem 0;
+    margin: 0;
+    text-align: center;
+}
+
+img, video {
+    max-width: 100%;
+}
+
+svg {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 1rem;
+}
+
+.row::after {
+    content: "";
+    /*clear*/: both;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    background-color: black;
+    padding: 1rem 1rem 1.15rem 1rem;
+    z-index: 1000;
+}
+
+#border {
+    border-bottom: 1px solid white;
+    position: absolute;
+    bottom: 0px;
+    width: calc(100% - 2rem);
+}
+
+.section {
+    border-top: 1px solid white;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.no-border {
+    border-top: 0px;
+}
+
+div.section-about p {
+    line-height: 1.4rem;
+    text-align: left;
+}
+
+p.space-after {
+    padding-bottom: 1.5rem;
+}
+
+p.caption {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .65rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: .5rem 0 1.5rem 0;
+    width: 90%;
+}
+
+p.caption-excerpt {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .65rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: .5rem 0 1.5rem 0;
+    width: 60%;
+}
+
+p.extended {
+    margin-top: -1.8rem;
+    width: 60%;
+}
+
+p.extended-vert {
+    margin-top: -1.8rem;
+    width: 90%;
+}
+
+p.excerpt {
+    font-family: "gc15-mono", monospace;
+    font-size: 2rem;
+    line-height: 1.15em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    letter-spacing: -.04em;
+    word-spacing: -.1em;
+    padding: 1.25rem 0 1.5rem 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+div.img-chunk-vert {
+    max-width: 60%;
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: .3rem;
+}
+
+div.img-chunk-square {
+    max-width: 80%;
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: .3rem;
+}
+
+div.img-chunk-horiz {
+    max-width: 100%;
+    margin: 0 auto;
+    display: inline-block;
+    padding-top: .3rem;
+}
+
+div.img-chunk-horiz-vid {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: .3rem;
+}
+
+div.txt-chunk {
+    width: 100%;
+    display: inline-block;
+}
+
+div.space-before {
+    padding-top: 1.5rem;
+}
+
+div.top {
+    padding-top: 3rem;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: ;
+  }
+
+.indent {
+    text-indent: 1.5rem;
+}
+
+.left-align {
+    padding-left: 1.5rem;
+}
+
+.caps {
+    text-transform: uppercase;
+}
+
+.ital {
+    font-family: "gc16-SemiBoldItalic", monospace;
+}
+
+.project .hidden {
+    display: none;
+}
+
+.project.is-expanded p {
+    display: block;
+}
+
+.project.is-expanded a {
+    display: inline;
+}
+
+.project.is-hidden .more {
+    display: none;
+}
+
+#face {
+    fill: none;
+    stroke-width: .17px;
+    stroke: white; 
+}
+
+#hour, #min {
+    stroke: white;
+    stroke-width: .34px;
+}
+
+#sec {
+    stroke: white;
+    stroke-width: .17px;
+}
+
+.mobile, .header-mobile {
+    display: none;
+}
+
+@media all and (min-width: 1920px) { 
+    html, body, h1, p, li { 
+      font-size: 32px; 
+    }
+}
+
+@media all and (max-width: 1920px) { 
+    html, body, h1, p, li { 
+      font-size: 30px; 
+    }
+}
+
+@media all and (max-width: 1620px) { 
+    html, body, h1, p, li { 
+      font-size: 28px; 
+    }
+}
+
+@media all and (max-width: 1440px) { 
+    html, body, h1, p, li { 
+      font-size: 26px; 
+    }
+}
+
+@media all and (max-width: 1280px) { 
+    html, body, h1, p, li { 
+      font-size: 22px; 
+    }
+}
+
+@media all and (max-width: 1024px) { 
+    html, body, h1, p, li { 
+      font-size: 20px; 
+    }
+}
+
+@media all and (max-width: 840px) { 
+    html, body, h1, p, li { 
+      font-size: 18px;
+    }
+    h2, p.caption {
+      font-size: .75rem;
+    }
+    [class*="col-"] {
+      width: 100%;
+    }
+    .container, .row {
+      display: block;
+    }
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+    div.col-mobile {
+      padding-top: 0px;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    div.top-mobile {
+        padding-top: 0rem;
+    }
+    div.section-mobile {
+        padding-bottom: 0rem;
+    }
+}
+
+@media all and (max-width: 768px) {
+    html, body, h1, p, li {
+      font-size: 17px;
+    }
+    div.space-before {
+    padding-top: 3rem;
+    }
+}
+
+@media all and (max-width: 652px) {
+    html, body, h1, p, li {
+      font-size: 16px;
+    }
+    .section-about {
+      padding-top: 1.2rem;
+    }
+    .header-mobile {
+      display: block;
+    }
+    .header-desktop {
+      display: none;
+    }
+    h2 {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .75rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin: 0;
+    padding: .375rem 0 1.25rem 0;
+    border: none;
+    }
+    p.caption {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .75rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: .5rem 0 1.5rem 0;
+    width: 90%;
+    }
+    p.caption-excerpt {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .75rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: .5rem 0 1.5rem 0;
+    width: 60%;
+    }
+    p.excerpt {
+    font-family: "gc15-mono", monospace;
+    font-size: 2.8rem;
+    line-height: 1.15em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    letter-spacing: -.04em;
+    word-spacing: -.1em;
+    padding: 1.25rem 0 1.5rem 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    }
+}
+
+@media all and (max-width: 480px) {
+    html, body, h1, p, li {
+      font-size: 15px;
+    }
+    h2 {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .8rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin: 0;
+    padding: .375rem 0 1.25rem 0;
+    border: none;
+    }
+    p.caption {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .8rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: .5rem 0 1.5rem 0;
+    width: 90%;
+    }
+    p.caption-excerpt {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .8rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: .5rem 0 1.5rem 0;
+    width: 60%;
+    }
+    p.excerpt {
+    font-family: "gc15-mono", monospace;
+    font-size: 2.8rem;
+    line-height: 1.15em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    letter-spacing: -.04em;
+    word-spacing: -.1em;
+    padding: 1.25rem 0 1.5rem 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    }
+
+@media all and (max-width: 360px) {
+    html, body, h1, p, li {
+      font-size: 13px;
+    }
+    h2 {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .8rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    margin: 0;
+    padding: .375rem 0 1.25rem 0;
+    border: none;
+    }
+    p.caption {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .8rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: .5rem 0 1.5rem 0;
+    width: 90%;
+    }
+    p.caption-excerpt {
+    font-family: "gc16-SemiBold", monospace;
+    font-size: .8rem;
+    line-height: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: .5rem 0 1.5rem 0;
+    width: 60%;
+    }
+    p.excerpt {
+    font-family: "gc15-mono", monospace;
+    font-size: 2.8rem;
+    line-height: 1.15em;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    letter-spacing: -.04em;
+    word-spacing: -.1em;
+    padding: 1.25rem 0 1.5rem 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    }
+}
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
